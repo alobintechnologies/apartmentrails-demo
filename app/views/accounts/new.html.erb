@@ -1,0 +1,16 @@
+<div class="col-md-6 col-md-offset-3 panel panel-default">
+  <div class="panel-body">
+    <h2>Account naan than da </h2>
+
+    <%= simple_form_for @account do |f| %>
+      <%= f.input :subdomain %>
+      <%= f.simple_fields_for :owner do |of| %>
+        <%= of.input :email %>
+        <%= of.input :name %>
+        <%= of.input :password %>
+        <%= of.input :password_confirmation %>
+      <% end %>
+      <%= f.submit "Create Account", class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>

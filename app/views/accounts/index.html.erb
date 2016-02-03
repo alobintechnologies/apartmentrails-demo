@@ -1,0 +1,10 @@
+<table class="table table-bordered">
+  <tbody>
+    <% @accounts.each do |a| %>
+    <tr>
+	    <td><%= a.subdomain %></td>
+	    <td class="warning"><%= a.owner_email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

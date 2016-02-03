@@ -1,0 +1,37 @@
+Apartment multi-tenanted tasks:
+  ✔ implement the apartment database with subdomain @done(2016-02-02 12:34) @project(Apartment multi-tenanted tasks)
+  using apartment faced a major issue that, if the database was not found means Tenant is available in Accounts table but not database.
+  at this point the system throws ActiveRecord::NoDatabaseError, instead of Apartment::TenantNotFound exception.
+  Resolved this by creating another middleware by extending the Apartment::Elevators::Subdomain
+  ✔ Implement devise gem integration for user model. @done(2016-02-02 12:53) @project(Apartment multi-tenanted tasks)
+  ✔ Implement the one to many concept of accounts with users table @done(2016-02-02 21:04) @project(Apartment multi-tenanted tasks)
+  ✔ Implement the account signup with owner data. @done(2016-02-02 21:04) @project(Apartment multi-tenanted tasks)
+  ✔ Verify user login for their account with subdomain only. @done(2016-02-02 21:04) @project(Apartment multi-tenanted tasks)
+  ✔ Verify the other users cannot login or view the records of another user account. @done(2016-02-02 21:04) @project(Apartment multi-tenanted tasks)
+  ✔ Change the root url based on the subdomain constraint, i.e., if user logged in with subdomain they should get projects#index as root url. @done(2016-02-02 21:04) @project(Apartment multi-tenanted tasks)
+
+Devise Gem Tasks:
+  ☐ Configre the email settings
+  ☐ Implement mandrill for sending email
+
+User functionalities:
+  ☐ Verify forget password
+
+Invite Users:
+  ☐ Invite another user for the account.
+
+Layout Design for website:
+  ☐ Design the layout for AloTracker from daily design youtube video
+
+Layout Design for project:
+  ☐ Design the layout from DailyDesign youtube demo
+
+Project Module:
+  ☐ Plan for the initial project model variables
+  ☐ Create project model scaffold
+  ☐ Verify the projects of one account is not viewable by another account
+  ☐ Create the layout for projects list and grid view.
+
+Testing Specs:
+  ☐ Create the spec for multi-tenanted functionalities
+  ☐ Add rspec, capybara, factorygirls gems for testing

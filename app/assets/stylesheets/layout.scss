@@ -1,0 +1,13 @@
+$primaryColor: #f3f3e3;
+body {
+  padding-top: 30px;
+}
+
+.table {
+  tr {
+    color: $primaryColor;
+    td {
+      color: #454544;
+    }
+  }
+}
