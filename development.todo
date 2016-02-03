@@ -15,13 +15,16 @@ Devise Gem Tasks:
   ☐ Implement mandrill for sending email
 
 User functionalities:
-  ☐ Verify forget password
+  ✔ Verify forget password @done(2016-02-03 10:30) @project(User functionalities)
+  ☐ Configure the email addresses correctly for production
 
 Invite Users:
   ☐ Invite another user for the account.
 
 Layout Design for website:
   ☐ Design the layout for AloTracker from daily design youtube video
+  ☐ Flash message display in the application layout page as global.
+  ☐ Active link setting for menus
 
 Layout Design for project:
   ☐ Design the layout from DailyDesign youtube demo

@@ -1,13 +1,15 @@
 $primaryColor: #f3f3e3;
 body {
-  padding-top: 30px;
+  padding-top: 0px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.table {
-  tr {
-    color: $primaryColor;
-    td {
-      color: #454544;
-    }
+.navbar.navbar-borderless {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.page-header {
+  margin-top: 0;
+  h2 {
   }
 }
