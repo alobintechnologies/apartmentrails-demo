@@ -1,14 +1,59 @@
-<p id="notice"><%= notice %></p>
+<section class="project">
+  <div class="page-header project-header">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="page-title"><%= @project.name %> <span class="label label-success">Completed</span></h4>
+      </div>
+      <div class="col-sm-6">
+        <div class="tool-bar">
+          <div class="btn-group pull-right tool-bar-item" role="group">
+            <a href="#" class="btn btn-success btn-sm">Add Task list</a>
+          </div>
+          <div class="btn-group pull-right tool-bar-item" role="group">
+            <%= link_to '<i class="fa fa-star"></i>'.html_safe, 'projects', class: 'btn btn-default btn-sm ' + set_active('projects') %>
+            <a href="projects/archived" class="btn btn-default btn-sm <%= set_active('projects/archived') %>"><i class="fa fa-archive"></i></a>
+            <a href="projects/completed" class="btn btn-default btn-sm <%= set_active('projects/completed') %>"><i class="fa fa-folder"></i></a>
+          </div>
+          <!--<ul class="nav nav-justified navbar-right">
+            <%= nav_link '<i class="fa fa-star"></i> Starred'.html_safe, 'projects/starred' %>
+            <li role="presentation"><a href="#"><i class="fa fa-archive"></i> Archived</a></li>
+            <li role="presentation"><a href="#"><i class="fa fa-folder"></i> Completed</a></li>
+          </ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+  <article class="project-card">
+    <header class="project-card-header">
+      <div class="ribbon grey right"><span>archived</span></div>
+      <figure class="project-header-logo">
+        <%= link_to project_icon(@project), @project, style: 'background-color: #e3e34d', class: 'img-circle project-icon' %>
+      </figure>
+      <div class="project-header-content">
+        <h2><%= @project.name %> <small><a href="#" title="Make this project as favorite to see in favorites list"><span class="fa fa-star-o"></span></a></small></h2>
+        <small><%= @project.desc %></small>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @project.desc %>
-</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+        <%= link_to 'Edit', edit_project_path(@project) %> |
+        <%= link_to 'Back', projects_path %>
+      </div>
+    </header>
+    <section class="project-card-content">
+      <div class="project-tool-bar">
+        <div class="project-tools">
+          <div class="nav-group-hz">
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+          </div>
+          <div class="nav-group-hz pull-right">
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</section>

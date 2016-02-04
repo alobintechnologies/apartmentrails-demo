@@ -16,7 +16,15 @@ module ApplicationHelper
   def nav_link(text, path)
     opts = current_page?(path) ? { class: 'active' } : {}
     content_tag(:li, opts) do
-      link_to text, path      
+      link_to text, path
+    end
+  end
+
+  def set_active(path)
+    if current_page?(path)
+      "active"
+    else
+      ""
     end
   end
 end

@@ -1,21 +1,20 @@
-<tr>
-  <td>
-    <%= link_to project_icon(project), project, style: 'background-color: #e3e34d', class: 'img-circle project-icon' %>
-  </td>
-  <td><%= link_to project.name, project %></td>
-  <td><%= project.desc %></td>
-  <td><%= project.created_at %></td>
-  <td>
-    <div class="dropdown">
-      <a class="dropdown-toggle" href="#" id="ProjectOptions<%= project.id %>" data-toggle="dropdown">
-        More
-        <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="ProjectOptions<%= project.id %>">
-        <li><%= link_to 'Show', project %></li>
-        <li><%= link_to 'Edit', edit_project_path(project) %></li>
-        <li><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-      </ul>
+<div class="col-sm-4 col-md-4">
+  <div class="project-thumbnail thumbnail">
+    <div class="project-thumbnail-header">
+      <figure>
+        <%= link_to project_icon(project), project, style: 'background-color: #e3e34d', class: 'project-icon' %>
+      </figure>
+      <div class="project-header-content">
+        <h3 class="project-title"><%= link_to project.name, project %></h3>
+      </div>
     </div>
-  </td>
-</tr>
+    <div class="project-thumbnail-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias veritatis optio natus esse nam libero nisi inventore quo ullam vitae similique dolorum quibusdam eligendi laudantium, vero atque odit est facere.</div>
+    <div class="project-thumbnail-footer">
+      <div class="nav-group-hz">
+        <a href="#">Tasks1</a>
+        <a href="#">Tasks2</a>
+        <a href="#">Tasks3</a>
+      </div>
+    </div>
+  </div>
+</div>

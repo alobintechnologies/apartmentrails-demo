@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
+    <!-- Bootstrap
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'%>
     <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,10 +22,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="<%= params[:action] %> <%= params[:controller] %> skin-green">
     <div id="wrapper">
       <header class="">
-        <nav class="navbar navbar-borderless" role="navigation">
+        <nav class="navbar navbar-borderless navbar-default" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -34,38 +34,46 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<%= root_url(subdomain: false) %>">Apartment Demo</a>
+              <a class="navbar-brand" href="<%= root_url(subdomain: false) %>"><span class="visible-md visible-lg">Apartment Demo</span><span class="visible-sm visible-xs">AD</span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="nav navbar-nav">
-                <%= nav_link 'Home', root_path %>
-                <%= link_to 'New Project', new_project_path, class: 'btn btn-success navbar-btn' %>
+                <% if user_signed_in? %>
+                  <%= nav_link 'Projects', root_path %>
+                  <li><a href="#">Settings</a></li>
+                <% else %>
+                  <%= nav_link 'Home', root_path %>
+                <% end %>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
-                  <li><%= link_to 'Hi ' + current_user.name, root_path %></li>
                   <%= link_to '<i class="fa fa-power-off"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
+                  <%= link_to 'New Project', new_project_path, class: 'btn btn-success navbar-btn' %>
                 <% end %>
               </ul>
-              <%= simple_form_for :search, url: 'search', method: :get, html: { class: 'navbar-form navbar-right search-form' } do |f| %>
-                 <%= f.input_field :query, :autofocus => true, :placeholder => 'Search', :class => 'form-control' %>
+              <% if user_signed_in? %>
+                <%= simple_form_for :search, url: 'search', method: :get, html: { class: 'navbar-form navbar-right search-form' } do |f| %>
+                   <%= f.input_field :query, :autofocus => true, :placeholder => 'Search', :class => 'form-control' %>
+                <% end %>
               <% end %>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
       </header>
+      <div class="container">
+        <%= flash_messages %>
+      </div>
       <section class="main-content">
         <div class="container">
-          <%= flash_messages %>
     	    <%= yield %>
         </div>
       </section>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
   </body>
 </html>

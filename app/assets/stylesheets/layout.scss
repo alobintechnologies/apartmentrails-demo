@@ -1,15 +1,76 @@
-$primaryColor: #f3f3e3;
+/**
+ * Table of contents:
+ * 1. General Styles
+ * 2. Navbar styles
+ * 3. Main Content Styles
+ * 4. Page Header Styles
+ * 5. list anchor styles
+ */
+/* 1. General Styles */
+
 body {
-  padding-top: 0px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding-top: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
+/* 2. Navbar Styles */
 .navbar.navbar-borderless {
   border-bottom: 1px solid #f2f2f2;
+  @media(min-width: 768px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-brand {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
 }
 
-.page-header {
-  margin-top: 0;
-  h2 {
+/* 3. Main Content Styles */
+.main-content {
+  .container {
+    background-color: #fff;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 500px;
+  }
+}
+
+/* 4. Page Header Styles */
+.main-content {
+  .page-header {
+    margin-top: 0;
+    .page-title {
+      text-transform: uppercase;
+    }
+    h4.page-title {
+      margin-top: 30px;
+    }
+    .tool-bar {
+      margin-top: 20px;
+     .tool-bar-item {
+       margin-left: 15px;
+     }
+      .nav>li>a {
+        color: #777;
+      }
+      .nav>li.active>a {
+        font-weight: bold;
+        color: #444;
+      }
+    }
+  }
+}
+
+/* 5. List anchor styles */
+.nav-group-hz {
+  display: inline-block;;
+  a {
+    float: left;
+    margin-right: 15px;
+    padding: 0;
   }
 }

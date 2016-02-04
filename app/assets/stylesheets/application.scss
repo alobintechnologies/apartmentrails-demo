@@ -1,5 +1,11 @@
+@import "variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "layout";
-@import "projects";
+@import "skins";
+@import "bootstrap_components";
+@import "ribbon";
+@import "controllers/projects";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -13,6 +19,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require_tree ./controllers
  *= require_self
  */
