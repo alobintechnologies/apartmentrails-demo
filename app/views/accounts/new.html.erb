@@ -3,14 +3,14 @@
     <h2>Create an Account </h2>
 
     <%= simple_form_for @account do |f| %>
-      <%= f.input :subdomain, input_html: { class: 'input-lg' } %>
+      <%= f.input :subdomain %>
       <%= f.simple_fields_for :owner do |of| %>
-        <%= of.input :email, input_html: { class: 'input-lg' } %>
-        <%= of.input :name, input_html: { class: 'input-lg' } %>
-        <%= of.input :password, input_html: { class: 'input-lg' } %>
-        <%= of.input :password_confirmation, input_html: { class: 'input-lg' } %>
+        <%= of.input :email %>
+        <%= of.input :name %>
+        <%= of.input :password %>
+        <%= of.input :password_confirmation %>
       <% end %>
-      <%= f.submit "Create Account", class: 'btn btn-primary btn-block' %>
+      <%= f.submit "Create Account", class: 'btn btn-primary btn-block btn-lg' %>
     <% end %>
   </div>
 </div>

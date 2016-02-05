@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+    @view_type = params[:view_type]
     @projects = Project.all
   end
 

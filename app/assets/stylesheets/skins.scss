@@ -1,26 +1,14 @@
 body.skin-green {
   background-color: #f2f2e9;
 
-  .navbar.navbar-borderless {
-    border-bottom: 1px solid #f2f2f2;
-    @media(min-width: 768px) {
-      .container {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .navbar-brand {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 22px;
-      }
-    }
-  }
-
   .main-content {
-    .container {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      box-shadow: $base-box-shadow;
       padding-left: 30px;
       padding-right: 30px;
-    }
   }
+}
+
+body.skin-default {
+  background-color: #fff;
 }

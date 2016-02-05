@@ -10,7 +10,6 @@
 
 body {
   padding-top: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
 /* 2. Navbar Styles */
@@ -22,21 +21,16 @@ body {
       padding-right: 0;
     }
     .navbar-brand {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 22px;
+      @include make-it-uppercase;
     }
   }
 }
 
 /* 3. Main Content Styles */
 .main-content {
-  .container {
-    background-color: #fff;
-    padding-left: 0px;
-    padding-right: 0px;
-    min-height: 500px;
-  }
+  min-height: 500px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 /* 4. Page Header Styles */
@@ -44,7 +38,6 @@ body {
   .page-header {
     margin-top: 0;
     .page-title {
-      text-transform: uppercase;
     }
     h4.page-title {
       margin-top: 30px;

@@ -4,4 +4,12 @@
   </td>
   <td><h4><%= link_to project.name, project %><br/><small><%= truncate(project.desc, :length => 80) %></small></h4></td>
   <td><small><%= time_ago_in_words(project.created_at) %> ago</small></td>
+  <td>
+    <!-- TODO: implement teams for users with project -->
+    <div class="nav-group-hz">
+      <a href="#" title="Satheesh Kumar"><%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %></a>
+      <a href="#" title="Naveen Kumar"><%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %></a>
+      <a href="#" title="Syed Ansari"><%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %></a>
+    </div>
+  </td>
 </tr>

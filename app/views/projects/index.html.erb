@@ -5,7 +5,11 @@
     </div>
     <div class="col-sm-6">
       <div class="tool-bar">
-        <div class="btn-group pull-right" role="group">
+        <div class="btn-group pull-right tool-bar-item" role="group">
+          <%= link_to '<i class="fa fa-th-list"></i>'.html_safe, 'projects', class: 'btn btn-default btn-sm ' + set_active('projects') %>
+          <%= link_to '<i class="fa fa-th"></i>'.html_safe, 'projects?view_type=grid', class: 'btn btn-default btn-sm ' + set_active('projects') %>
+        </div>
+        <div class="btn-group pull-right tool-bar-item" role="group">
           <%= link_to '<i class="fa fa-star"></i>'.html_safe, 'projects', class: 'btn btn-default btn-sm ' + set_active('projects') %>
           <a href="projects/archived" class="btn btn-default btn-sm <%= set_active('projects/archived') %>"><i class="fa fa-archive"></i></a>
           <a href="projects/completed" class="btn btn-default btn-sm <%= set_active('projects/completed') %>"><i class="fa fa-folder"></i></a>
@@ -22,7 +26,7 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="projects">
-      <% if @view_type = 'grid' %>
+      <% if @view_type == 'grid' %>
         <div class="row">
           <%= render @projects %>
         </div>
@@ -31,9 +35,10 @@
           <table class="table">
             <thead>
               <tr>
+                <th>Img</th>
                 <th>Name</th>
-                <th>Desc</th>
                 <th>Created</th>
+                <th>Collaborators</th>
               </tr>
             </thead>
             <tbody>

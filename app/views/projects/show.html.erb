@@ -27,23 +27,22 @@
   <article class="project-card">
     <header class="project-card-header">
       <div class="ribbon grey right"><span>archived</span></div>
-      <figure class="project-header-logo">
+      <!--<figure class="project-header-logo">
         <%= link_to project_icon(@project), @project, style: 'background-color: #e3e34d', class: 'img-circle project-icon' %>
-      </figure>
+      </figure>-->
       <div class="project-header-content">
         <h2><%= @project.name %> <small><a href="#" title="Make this project as favorite to see in favorites list"><span class="fa fa-star-o"></span></a></small></h2>
-        <small><%= @project.desc %></small>
-
-
-        <%= link_to 'Edit', edit_project_path(@project) %> |
-        <%= link_to 'Back', projects_path %>
+        <span><%= @project.desc %></span>
+      </div>
+      <div class="project-tool-bar pull-right">
+        <%= link_to 'Edit Project', edit_project_path(@project) %> | <%= link_to '<i class="fa fa-gear"></i> Settings'.html_safe, projects_path %>
       </div>
     </header>
     <section class="project-card-content">
       <div class="project-tool-bar">
         <div class="project-tools">
           <div class="nav-group-hz">
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks', class: 'btn btn-default outline btn-lg' %>
             <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
             <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
           </div>

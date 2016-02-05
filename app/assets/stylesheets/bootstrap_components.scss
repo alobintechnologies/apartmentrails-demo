@@ -23,9 +23,46 @@
     background-color: rgba(255,255,255,1);
     border: none;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
   .dropdown-menu>li>a {
     line-height: 2;
   }
+}
+/* Button Styles */
+.btn {
+  @include make-it-uppercase;
+}
+.btn-lg.round {
+  border-radius: 24px;
+}
+.btn.outline {
+  background: none;
+}
+.btm-default.outline {
+  border: 2px solid $btn-default-border;
+  color: $btn-default-border;
+}
+.btn-default.outline:hover, .btn-default.outline:focus, .btn-default.outline:active, .btn-default.outline.active, .open > .dropdown-toggle.btn-default {
+  color: $btn-default-bg;
+  border-color: $btn-default-bg;
+}
+.btn-default.outline:active, .btn-default.outline.active {
+  border-color: $btn-default-border;
+  color: $btn-default-border;
+  box-shadow: none;
+}
+
+.btn-primary.outline {
+  border: 1px solid $btn-primary-border;
+  color: $btn-primary-border;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: $btn-primary-bg;
+  border-color: $btn-primary-bg;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: $btn-primary-border;
+  color: $btn-primary-border;
+  box-shadow: none;
 }

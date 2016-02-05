@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application'%>
     <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,7 +22,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="<%= params[:action] %> <%= params[:controller] %> skin-green">
+  <body class="<%= params[:action] %> <%= params[:controller] %> skin-default">
     <div id="wrapper">
       <header class="">
         <nav class="navbar navbar-borderless navbar-default" role="navigation">
@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<%= root_url(subdomain: false) %>"><span class="visible-md visible-lg">Apartment Demo</span><span class="visible-sm visible-xs">AD</span></a>
+              <a class="navbar-brand" href="<%= root_url(subdomain: false) %>"><span class="visible-md visible-lg">SaaS Demo</span><span class="visible-sm visible-xs">AD</span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,8 +49,8 @@
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
-                  <%= link_to '<i class="fa fa-power-off"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
-                  <%= link_to 'New Project', new_project_path, class: 'btn btn-success navbar-btn' %>
+                  <%= link_to '<i class="fa fa-power-off"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: 'btn btn-default outline navbar-btn' %>
+                  <%= link_to 'New Project', new_project_path, class: 'btn btn-primary navbar-btn' %>
                 <% end %>
               </ul>
               <% if user_signed_in? %>
@@ -65,12 +65,15 @@
       <div class="container">
         <%= flash_messages %>
       </div>
-      <section class="main-content">
-        <div class="container">
-    	    <%= yield %>
-        </div>
-      </section>
+
+      <div class="container">
+        <section class="main-content">
+      	    <%= yield %>
+        </section>
+      </div>
     </div>
+
+    <%= javascript_include_tag 'application'%>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed
