@@ -1,7 +1,4 @@
 Apartment multi-tenanted tasks:
-  using apartment faced a major issue that, if the database was not found means Tenant is available in Accounts table but not database.
-  at this point the system throws ActiveRecord::NoDatabaseError, instead of Apartment::TenantNotFound exception.
-  Resolved this by creating another middleware by extending the Apartment::Elevators::Subdomain
 
 Devise Gem Tasks:
   ☐ Configre the email settings
@@ -14,11 +11,11 @@ Invite Users:
   ☐ Invite another user for the account.
 
 Layout Design for website:
-  ☐ Paginate gem to installed
 
 Layout Design for project:
   ☐ Implement pagination option
   ☐ jQuery is not working inside the code
+  ☐ Check th emobile responsive tasks
 
 Search functionalities:
   ☐ Implement the search page
@@ -27,9 +24,12 @@ Search functionalities:
 Project Module:
   ☐ Add due date for project
   ☐ Plan for the initial project model variables
+  ☐ Archive project
+  ☐ Add project status [Open, Archived, Completed]
+  ☐ Add due date to project
+  ☐ 
 
 Project Show functionalities:
-  ☐
 
 Testing Specs:
   ☐ Create the spec for multi-tenanted functionalities

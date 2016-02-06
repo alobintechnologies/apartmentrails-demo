@@ -66,6 +66,8 @@ body.projects.show {
   }
 }
 
+$project-show-logo: false;
+
 .project {
   .project-header {
     display: none;
@@ -86,21 +88,23 @@ body.projects.show {
       padding: 7px 15px;
       position: relative;
 
-      .project-header-logo {
-        float: left;
-        margin-top: 15px;
-        .project-icon {
-          width: 128px;
-          height: 128px;
-          text-align: center;
-          display: block;
-          padding-top: 24px;
-          text-decoration: none;
-          font-size: 62px;
+      @if $project-show-logo {
+        .project-header-logo {
+          float: left;
+          margin-top: 15px;
+          .project-icon {
+            width: 128px;
+            height: 128px;
+            text-align: center;
+            display: block;
+            padding-top: 24px;
+            text-decoration: none;
+            font-size: 62px;
+          }
         }
-      }
-      .project-header-content {
-        margin-left: 150px;
+        .project-header-content {
+          margin-left: 150px;
+        }
       }
       .project-tool-bar {
         margin-top: -20px;
