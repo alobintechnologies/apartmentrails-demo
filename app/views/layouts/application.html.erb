@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'%>
     <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -62,18 +63,13 @@
           </div><!-- /.container-fluid -->
         </nav>
       </header>
-      <div class="container">
-        <%= flash_messages %>
-      </div>
-
-      <div class="container">
-        <section class="main-content">
-      	    <%= yield %>
-        </section>
-      </div>
+      
+      <section class="main-content">
+          <%= flash_messages %>
+    	    <%= yield %>
+      </section>
     </div>
 
-    <%= javascript_include_tag 'application'%>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed

@@ -44,8 +44,8 @@
   color: $btn-default-border;
 }
 .btn-default.outline:hover, .btn-default.outline:focus, .btn-default.outline:active, .btn-default.outline.active, .open > .dropdown-toggle.btn-default {
-  color: $btn-default-bg;
-  border-color: $btn-default-bg;
+  color: $btn-default-border;
+  border-color: $btn-default-border;
 }
 .btn-default.outline:active, .btn-default.outline.active {
   border-color: $btn-default-border;

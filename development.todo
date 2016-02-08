@@ -1,5 +1,11 @@
 Apartment multi-tenanted tasks:
 
+Subscription functionalities:
+  ☐ Install the subscription gem
+  ☐ Implement the payment gateway with braintree
+  ☐ Implement the recurring billing option
+  ☐
+
 Devise Gem Tasks:
   ☐ Configre the email settings
   ☐ Implement mandrill for sending email
@@ -11,6 +17,7 @@ Invite Users:
   ☐ Invite another user for the account.
 
 Layout Design for website:
+  ☐ Design the home page with jumbotron, features, pricing, screencast slider, signup, footer
 
 Layout Design for project:
   ☐ Implement pagination option
@@ -27,7 +34,7 @@ Project Module:
   ☐ Archive project
   ☐ Add project status [Open, Archived, Completed]
   ☐ Add due date to project
-  ☐ 
+  ☐
 
 Project Show functionalities:
 

@@ -1,0 +1,24 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body.welcome {
+  .thumbnail {
+    margin: 30px 0;
+    padding: 15px;
+    position: relative;
+    box-shadow: $base-box-shadow;
+    .plan-cost {
+      padding: 15px;
+      background-color: $gray-lighter;
+    }
+    .plan-signup {
+      padding-top: 15px;
+    }
+  }
+  #projectSlider {
+    height: 768px;
+    .carousel-inner > .item {
+      height: 768px;
+    }
+  }
+}

@@ -105,6 +105,11 @@ $project-show-logo: false;
         .project-header-content {
           margin-left: 150px;
         }
+        .project-card-content {
+          .project-tool-bar {            
+            margin-left: 150px;
+          }
+        }
       }
       .project-tool-bar {
         margin-top: -20px;
@@ -115,7 +120,6 @@ $project-show-logo: false;
       .project-tool-bar {
         padding-top: 15px;
         padding-bottom: 15px;
-        margin-left: 150px;
       }
     }
   }

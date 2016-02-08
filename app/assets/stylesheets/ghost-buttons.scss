@@ -1,0 +1,105 @@
+// ghost-button
+@mixin ghost-btn($color: $brand-primary, $altColor: #ffffff, $is_transparent: false) {
+  border: 1px solid $color;
+  color: $color;
+  @include border-radius(5px);
+  @include box-sizing(content-box);
+  @include transition(all 0.2s ease-out);
+  zoom: 1;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  background-color: $altColor;
+  &:hover {
+    @include transition(0.2s ease);
+    background-color: $color;
+    color: $altColor !important;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+@mixin btn-raised($color: $brand-primary, $depth: 3px) {
+  box-shadow: 0 $depth 0 0 darken($color, 4.5%);
+
+  &:hover, &:active, &.active {
+  	background: lighten($color, 4.5%) !important;
+  }
+}
+
+.ghost-btn.btn-primary {
+  @include ghost-btn($brand-primary);
+}
+.ghost-btn.btn-default {
+  @include ghost-btn($gray);
+}
+.ghost-btn.btn-success {
+  @include ghost-btn($brand-success);
+}
+.ghost-btn.btn-info {
+  @include ghost-btn($brand-info);
+}
+.ghost-btn.btn-danger {
+  @include ghost-btn($brand-danger);
+}
+.ghost-btn.transparent.btn-default {
+  @include ghost-btn(#ffffff, $gray);
+  background-color: transparent !important;
+}
+
+// round buttons
+.btn.round {
+	border-radius: $padding-base-horizontal !important;
+}
+.btn-lg.round {
+	border-radius: $padding-large-horizontal !important;
+}
+.btn-sm.round {
+	border-radius: $padding-small-horizontal !important;
+}
+.btn-xs.round {
+	border-radius: $padding-xs-horizontal !important;
+}
+
+/******************************************************
+	RAISED BUTTONS
+******************************************************/
+
+.btn-primary.btn-raised {
+	@include btn-raised($brand-primary);
+}
+.btn-success.raised {
+	box-shadow: 0 3px 0 0 #008c52;
+}
+.btn-success.raised:active, .btn-success.raised.active {
+	background: #39bf87;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-info.raised {
+	box-shadow: 0 3px 0 0 #35a2b5;
+}
+.btn-info.raised:active, .btn-info.raised.active {
+	background: #5fd4e8;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-warning.raised {
+	box-shadow: 0 3px 0 0 #b87430;
+}
+.btn-warning.raised:active, .btn-warning.raised.active {
+	background: #eba259;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-danger.raised {
+	box-shadow: 0 3px 0 0 #bf4343;
+}
+.btn-danger.raised:active, .btn-danger.raised.active {
+	background: #f26d6d;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
