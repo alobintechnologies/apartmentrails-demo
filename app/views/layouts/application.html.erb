@@ -12,9 +12,11 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <%= include_gon %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application'%>
     <%= csrf_meta_tags %>
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +65,7 @@
           </div><!-- /.container-fluid -->
         </nav>
       </header>
-      
+
       <section class="main-content">
           <%= flash_messages %>
     	    <%= yield %>

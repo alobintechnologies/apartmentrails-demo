@@ -29,6 +29,10 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'apartment', '~> 1.0', '>= 1.0.2'
 
+# payment subscription
+gem 'braintree', '~> 2.57'
+gem 'gon', '~> 6.0', '>= 6.0.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

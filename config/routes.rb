@@ -10,7 +10,7 @@ class SubdomainBlank
   end
 end
 
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
 
   constraints(SubdomainPresent) do
     devise_for :users

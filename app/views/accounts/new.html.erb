@@ -1,7 +1,8 @@
 <h2 class="text-center">Create an Account </h2>
-<div class="col-md-6 col-md-offset-3 panel panel-default">
+<div class="col-sm-6 col-sm-offset-3 panel panel-default">
   <div class="panel-body">
     <%= simple_form_for @account do |f| %>
+      <h2><i class="fa fa-user"></i> Organisation Details</h2>
       <%= f.input :subdomain %>
       <%= f.simple_fields_for :owner do |of| %>
         <%= of.input :email %>
@@ -9,6 +10,8 @@
         <%= of.input :password %>
         <%= of.input :password_confirmation %>
       <% end %>
+      <h2><i class="fa fa-credit-card"></i> Billing Details</h2>
+      <div id="dropin"></div>
       <%= f.submit "Create Account", class: 'btn btn-primary btn-block btn-lg' %>
     <% end %>
   </div>

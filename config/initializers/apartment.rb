@@ -67,6 +67,8 @@ end
 # Rails.application.config.middleware.use 'Apartment::Elevators::Domain'
 #Rails.application.config.middleware.use 'RescuedApartmentMiddleware'
 #Rails.application.config.middleware.use 'Apartment::Elevators::RescuedApartmentMiddleware'
-Rails.application.config.middleware.insert_before ActiveRecord::Migration::CheckPending, Apartment::Elevators::RescuedApartmentMiddleware
+if Rails.env != 'test' # we coded this because rake db:migrate was throwing error in here while executing
+  Rails.application.config.middleware.insert_before ActiveRecord::Migration::CheckPending, Apartment::Elevators::RescuedApartmentMiddleware
+end
 Apartment::Elevators::Subdomain.excluded_subdomains = %w{ www public admin app demo }
 #Apartment::Elevators::Subdomain.prepend

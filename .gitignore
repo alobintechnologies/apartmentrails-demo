@@ -17,3 +17,6 @@
 
 # ignore byebug history
 .byebug_history
+
+#ignoring the todo lists
+*.todo
