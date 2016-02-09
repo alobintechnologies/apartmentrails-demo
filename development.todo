@@ -1,3 +1,7 @@
+Coding tasks:
+  ☐ Include the gem for .yml configuration [figaro]
+  ☐ Include the gem for viewbag like in rails with [gon gem]
+  ☐ SoftDelete to be implemented using a gem
 Apartment multi-tenanted tasks:
 
 Subscription functionalities:
