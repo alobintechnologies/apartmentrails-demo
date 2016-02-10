@@ -63,11 +63,13 @@
           </div><!-- /.container-fluid -->
         </nav>
       </header>
-      
-      <section class="main-content">
-          <%= flash_messages %>
-    	    <%= yield %>
-      </section>
+
+      <div class="container">
+        <section class="main-content">
+            <%= flash_messages %>
+      	    <%= yield %>
+        </section>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)

@@ -39,19 +39,98 @@
       </div>
     </header>
     <section class="project-card-content">
-      <div class="project-tool-bar">
-        <div class="project-tools">
-          <div class="nav-group-hz">
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks', class: 'btn btn-default outline btn-lg' %>
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+      <div class="row">
+
+        <aside class="project-sidebar col-md-3 visible-md visible-lg">
+          <ul class="nav nav-stacked">
+            <li><a href="#" class="active"><i class="fa fa-list-alt"></i> Latest updates</a></li>
+            <li class=""><a href="#"><i class="fa fa-th-list"></i> Todo List</a></li>
+            <li class=""><a href="#"><i class="fa fa-comments"></i> Discussions</a></li>
+            <li class=""><a href="#"><i class="fa fa-files-o"></i> Files</a></li>
+            <li class=""><a href="#"><i class="fa fa-users"></i> Invite More</a></li>
+          </ul>
+        </aside>
+        <section class="project-card-panel col-md-9 col-sm-12">
+          <div class="panel latest-updates-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title pull-left"><i class="fa fa-list-alt"></i> Latest updates</h3>
+              <a href="#" class="pull-right">See all updates</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <div class="latest-update">
+                <div>you opened a todo1 <a href="#">create a website page1</a></div>
+                <small>on <em>Jan 29 2015</em></small>
+              </div>
+              <div class="latest-update">
+                <div>you opened a todo2 <a href="#">create a website page2</a></div>
+                <small>on <em>Jan 29 2015</em></small>
+              </div>
+              <div class="latest-update">
+                <div>you opened a todo3 <a href="#">create a website page3</a></div>
+                <small>on <em>Jan 29 2015</em></small>
+              </div>
+              <div class="latest-update">
+                <div>you opened a todo4 <a href="#">create a website page4</a></div>
+                <small>on <em>Jan 29 2015</em></small>
+              </div>
+              <div class="latest-update">
+                <div>you opened a todo5 <a href="#">create a website page5</a></div>
+                <small>on <em>Jan 29 2015</em></small>
+              </div>
+            </div>
           </div>
-          <div class="nav-group-hz pull-right">
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
-            <%= link_to '<i class="fa fa-tasks"></i> Tasks: 4'.html_safe, 'projects/' + @project.id.to_s + '/tasks' %>
+          <div class="panel todo-list-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title pull-left"><i class="fa fa-th-list"></i> Todo Lists</h3>
+              <a href="#" class="pull-right">See all todo lists</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <!--(.todo-list-group>h4{Todo list title$:}+(ul.nav.nav-stacked.todo-list>(li.todo-item>input:checkbox+span{todo list item$})*4)+a[href=#]{Add new todo})*4 -->
+              <div class="todo-list-group">
+                <h4>Todo list title1:</h4>
+                <ul class="nav nav-stacked todo-list">
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item1</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item2</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item3</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item4</span></li>
+                </ul>
+                <a href="#" class="add-new-todo">Add new todo</a>
+              </div>
+              <div class="todo-list-group">
+                <h4>Todo list title2:</h4>
+                <ul class="nav nav-stacked todo-list">
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item1</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item2</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item3</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item4</span></li>
+                </ul>
+                <a href="#" class="add-new-todo">Add new todo</a>
+              </div>
+              <div class="todo-list-group">
+                <h4>Todo list title3:</h4>
+                <ul class="nav nav-stacked todo-list">
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item1</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item2</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item3</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item4</span></li>
+                </ul>
+                <a href="#" class="add-new-todo">Add new todo</a>
+              </div>
+              <div class="todo-list-group">
+                <h4>Todo list title4:</h4>
+                <ul class="nav nav-stacked todo-list">
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item1</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item2</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item3</span></li>
+                  <li class="todo-item"><input type="checkbox" name="" id=""><span>todo list item4</span></li>
+                </ul>
+                <a href="#" class="add-new-todo">Add new todo</a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   </article>
