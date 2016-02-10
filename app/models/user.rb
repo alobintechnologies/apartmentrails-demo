@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   validates :email, presence: true
+
+  def has_payment_info?
+    braintree_customer_id
+  end
 end
