@@ -17,7 +17,7 @@ body.projects.show {
     }
   }
 }
-.projects {
+.projects-panel {
   .table tr td {
     vertical-align: middle;
   }
@@ -69,6 +69,7 @@ body.projects.show {
 $project-show-logo: false;
 
 .project {
+  margin-top: 30px;
   .project-header {
     display: none;
     .page-title {
@@ -79,6 +80,7 @@ $project-show-logo: false;
     }
   }
   .project-card {
+    box-shadow: $base-box-shadow;
     .project-card-header {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
@@ -106,21 +108,78 @@ $project-show-logo: false;
           margin-left: 150px;
         }
         .project-card-content {
-          .project-tool-bar {            
+          .project-tool-bar {
             margin-left: 150px;
           }
         }
       }
+
       .project-tool-bar {
-        margin-top: -20px;
+        margin-top: -30px;
+      }
+      .project-header-content {
+        margin-bottom: 15px;
       }
     }
     .project-card-content {
-      padding: 0px 15px 15px 15px;
+      padding: 15px;
       .project-tool-bar {
         padding-top: 15px;
         padding-bottom: 15px;
       }
-    }
-  }
-}
+      .project-sidebar {
+        border-right: 1px solid #f2f2f2;
+      }
+      .project-card-panel {
+        .panel-heading {
+          .panel-title {
+            font-size: $font-size-h3;
+          }
+        }
+        .latest-updates-panel {
+          .latest-update {
+            margin-bottom: 15px;
+          }
+        }
+        .todo-list-panel {
+          .todo-list {
+            .todo-item {
+              padding: 7px 15px;
+              input[type="checkbox"] {
+                margin-right: 15px;
+              }
+              input[type="text"] {
+                display: inline;
+                width: 80%;
+                border-color: transparent;
+              }
+              input[type="text"]:focus {
+                border: 1px solid #f2f2f2;
+                outline: none;
+              }
+            }
+          }
+        } // todo-list-panel
+        .discussions-panel {
+          tr.discussion {
+            border-top: 1px solid #f2f2f2;
+            td {
+              display: block;
+              width: 100%;
+              border: none;
+            }
+          }
+          @media (min-width: 768px) {
+            tr.discussion {
+              border: none;
+              td {
+                display: table-cell;
+                width: auto;
+              }
+            }
+          }
+        } // discussions-panel
+      } // project-card-panel
+    } // project-card-content
+  } // project-card
+} // project
