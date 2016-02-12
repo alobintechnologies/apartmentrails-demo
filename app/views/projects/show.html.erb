@@ -40,14 +40,13 @@
     </header>
     <section class="project-card-content">
       <div class="row">
-
         <aside class="project-sidebar col-md-3 visible-md visible-lg">
           <ul class="nav nav-stacked">
             <li><a href="#" class="active"><i class="fa fa-list-alt"></i> Latest updates</a></li>
             <li class=""><a href="#"><i class="fa fa-th-list"></i> Todo List</a></li>
             <li class=""><a href="#"><i class="fa fa-comments"></i> Discussions</a></li>
             <li class=""><a href="#"><i class="fa fa-files-o"></i> Files</a></li>
-            <li class=""><a href="#"><i class="fa fa-users"></i> Invite More</a></li>
+            <li class=""><a href="#" class="invite-user-link"><i class="fa fa-users"></i> Invite More</a></li>
           </ul>
         </aside>
         <section class="project-card-panel col-md-9 col-sm-12">
@@ -117,14 +116,54 @@
               <div class="clearfix"></div>
             </div>
             <div class="panel-body">
-              <!--table.table.discussion-table>tbody>(tr>.disuccsion[class=clearfix]>(a[href=# title="Satheesh kumar"]{<%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>}+span{Satheesh Kumar})+(span.discussion-content>a[href=#]{Login details not working - }+span{Hi Satheesh, I have completed the user login functionality, and exporting}))*3-->
+              <!--table.table.discussion-table>tbody>(tr>.discussion[class=clearfix]>(a[href=# title="Satheesh kumar"]{<%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>}+span{Satheesh Kumar})+(span.discussion-content>a[href=#]{Login details not working - }+span{Hi Satheesh, I have completed the user login functionality, and exporting}))*3-->
               <table class="table discussion-table">
                 <tbody>
-                  <tr class="disuccsion">
-                    <td>
+                  <tr class="discussion">
+                    <td class="hidden-xs">
                       <a href="#" title="Satheesh kumar">
                         <%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>
-                        <small> Satheesh Kumar</small>
+                      </a>
+                    </td>
+                    <td>
+                      <div class="discussion-content">
+                        <a href="#">Login details not working - </a><span>Hi Satheesh, I have completed the user login functionality, and exporting</span>
+                      </div>
+                      <div class="attachments nav-group-hz">
+                        <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
+                        <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
+                        <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
+                      </div>
+                    </td>
+                    <td>
+                      <small>
+                        <span>Jan 25 2016</span>
+                        <span>03:30pm</span>
+                      </small>
+                    </td>
+                  </tr>
+                  <tr class="discussion">
+                    <td class="hidden-xs">
+                      <a href="#" title="Satheesh kumar">
+                        <%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>
+                      </a>
+                    </td>
+                    <td width="70%">
+                      <div class="discussion-content">
+                        <a href="#">Login details not working - </a><span>Hi Satheesh, I have completed the user login functionality, and exporting</span>
+                      </div>
+                    </td>
+                    <td>
+                      <small>
+                        <span>Jan 25 2016</span>
+                        <span>03:30pm</span>
+                      </small>
+                    </td>
+                  </tr>
+                  <tr class="discussion">
+                    <td class="hidden-xs">
+                      <a href="#" title="Satheesh kumar">
+                        <%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>
                       </a>
                     </td>
                     <td width="70%">
@@ -140,53 +179,7 @@
                     <td>
                       <small>
                         <span>Jan 25 2016</span>
-                        <br>
-                        <span>03:30 pm</span>
-                      </small>
-                    </td>
-                  </tr>
-                  <tr class="disuccsion">
-                    <td>
-                      <a href="#" title="Satheesh kumar">
-                        <%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>
-                        <small> Satheesh Kumar</small>
-                      </a>
-                    </td>
-                    <td width="70%">
-                      <div class="discussion-content">
-                        <a href="#">Login details not working - </a><span>Hi Satheesh, I have completed the user login functionality, and exporting</span>
-                      </div>
-                    </td>
-                    <td>
-                      <small>
-                        <span>Jan 25 2016</span>
-                        <br>
-                        <span>03:30 pm</span>
-                      </small>
-                    </td>
-                  </tr>
-                  <tr class="disuccsion">
-                    <td>
-                      <a href="#" title="Satheesh kumar">
-                        <%= image_tag('no-avatar.png', height: '32', width: '32', class: 'img-circle') %>
-                        <small> Satheesh Kumar</small>
-                      </a>
-                    </td>
-                    <td width="70%">
-                      <div class="discussion-content">
-                        <a href="#">Login details not working - </a><span>Hi Satheesh, I have completed the user login functionality, and exporting</span>
-                        <div class="attachments nav-group-hz">
-                          <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
-                          <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
-                          <a href="#"><%= image_tag('no-avatar.png', height: '24') %></a>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <small>
-                        <span>Jan 25 2016</span>
-                        <br>
-                        <span>03:30 pm</span>
+                        <span>03:30pm</span>
                       </small>
                     </td>
                   </tr>
@@ -194,8 +187,64 @@
               </table>
             </div>
           </div>
+          <div class="panel attachments-panel">
+            <div class="panel-heading">
+              <h3 class="panel-title pull-left"><i class="fa fa-files-o"></i> Attachments</h3>
+              <a href="#" class="pull-right">See all files</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <div class="attachments">
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </section>
   </article>
+  <div class="modal fade" id="inviteUserModal" tabindex="-1" role="dialog" aria-labelledby="inviteUserModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="inviteUserModalTitle"></h4>
+        </div>
+        <div class="modal-body">
+          <%= form_tag do |f| %>
+            <%= text_field_tag :email %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send Mail</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
