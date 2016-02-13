@@ -182,4 +182,21 @@ $project-show-logo: false;
       } // project-card-panel
     } // project-card-content
   } // project-card
+  #attachmentLightBoxModal .modal-content {
+    /*background-color: transparent;*/
+    .lightbox-file-title {
+      word-wrap: break-word;
+    }
+    .lightbox-file-size {
+      font-style: italic;
+    }
+    .lightbox-thumbnails {
+      margin-top: 30px;
+      text-align: center;
+      .thumbnail.attachment {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+  }
 } // project
