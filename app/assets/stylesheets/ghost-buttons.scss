@@ -41,6 +41,9 @@
 .ghost-btn.btn-danger {
   @include ghost-btn($brand-danger);
 }
+.ghost-btn.btn-warning {
+  @include ghost-btn($brand-warning);
+}
 .ghost-btn.transparent.btn-default {
   @include ghost-btn(#ffffff, $gray);
   background-color: transparent !important;
@@ -64,7 +67,7 @@
 	RAISED BUTTONS
 ******************************************************/
 
-.btn-primary.btn-raised {
+.btn-primary.raised {
 	@include btn-raised($brand-primary);
 }
 .btn-success.raised {
