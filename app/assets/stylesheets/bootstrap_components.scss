@@ -66,3 +66,24 @@
   color: $btn-primary-border;
   box-shadow: none;
 }
+
+/* Modal styles */
+.modal-backdrop.in {
+  opacity: .9;
+  filter: alpha(opacity=90);
+}
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-header .close {
+  margin-top: -50px;
+  margin-right: -50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.modal-content {
+  box-shadow: 0 2px 8px rgba(33,33,33,0.1);
+  -webkit-box-shadow: 0 2px 8px rgba(31,45,61,0.1);
+  border: 1px solid #e5e5e5;
+}
