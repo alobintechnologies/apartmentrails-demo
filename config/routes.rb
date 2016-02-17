@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   constraints(SubdomainBlank) do
     resources :accounts, only: [:new, :create]
+    get '/styleguide', to: 'welcome#styleguide'
     root 'welcome#index'
   end
 end

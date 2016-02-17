@@ -19,7 +19,7 @@
   }
 }
 @mixin btn-raised($color: $brand-primary, $depth: 3px) {
-  box-shadow: 0 $depth 0 0 darken($color, 4.5%);
+  @include box-shadow(0 $depth 0 0 darken($color, 4.5%));
 
   &:hover, &:active, &.active {
   	background: lighten($color, 4.5%) !important;
@@ -41,6 +41,9 @@
 .ghost-btn.btn-danger {
   @include ghost-btn($brand-danger);
 }
+.ghost-btn.btn-warning {
+  @include ghost-btn($brand-warning);
+}
 .ghost-btn.transparent.btn-default {
   @include ghost-btn(#ffffff, $gray);
   background-color: transparent !important;
@@ -48,49 +51,49 @@
 
 // round buttons
 .btn.round {
-	border-radius: $padding-base-horizontal !important;
+	@include border-radius($padding-base-horizontal !important);
 }
 .btn-lg.round {
-	border-radius: $padding-large-horizontal !important;
+	@include border-radius($padding-base-horizontal !important);
 }
 .btn-sm.round {
-	border-radius: $padding-small-horizontal !important;
+	@include border-radius($padding-base-horizontal !important);
 }
 .btn-xs.round {
-	border-radius: $padding-xs-horizontal !important;
+	@include border-radius($padding-base-horizontal !important);
 }
 
 /******************************************************
 	RAISED BUTTONS
 ******************************************************/
 
-.btn-primary.btn-raised {
+.btn-primary.raised {
 	@include btn-raised($brand-primary);
 }
 .btn-success.raised {
-	box-shadow: 0 3px 0 0 #008c52;
+	@include box-shadow(0 3px 0 0 #008c52);
 }
 .btn-success.raised:active, .btn-success.raised.active {
 	background: #39bf87;
-	box-shadow: none;
+  @include box-shadow(none);
 	margin-bottom: -3px;
 	margin-top: 3px;
 }
 .btn-info.raised {
-	box-shadow: 0 3px 0 0 #35a2b5;
+	@include box-shadow(0 3px 0 0 #35a2b5);
 }
 .btn-info.raised:active, .btn-info.raised.active {
 	background: #5fd4e8;
-	box-shadow: none;
+  @include box-shadow(none);
 	margin-bottom: -3px;
 	margin-top: 3px;
 }
 .btn-warning.raised {
-	box-shadow: 0 3px 0 0 #b87430;
+	@include box-shadow(0 3px 0 0 #b87430);
 }
 .btn-warning.raised:active, .btn-warning.raised.active {
 	background: #eba259;
-	box-shadow: none;
+  @include box-shadow(none);
 	margin-bottom: -3px;
 	margin-top: 3px;
 }
@@ -99,7 +102,7 @@
 }
 .btn-danger.raised:active, .btn-danger.raised.active {
 	background: #f26d6d;
-	box-shadow: none;
+  @include box-shadow(none);
 	margin-bottom: -3px;
 	margin-top: 3px;
 }
