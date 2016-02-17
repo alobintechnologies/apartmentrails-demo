@@ -3,7 +3,7 @@ body.skin-green {
 
   .main-content {
       background-color: #fff;
-      box-shadow: $base-box-shadow;
+      @include box-shadow($base-box-shadow);
       padding-left: 30px;
       padding-right: 30px;
   }
