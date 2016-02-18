@@ -3,10 +3,10 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :desc %>
+    <%= f.input :desc, as: :text %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-primary outline' %>
+    <%= f.button :submit, class: 'btn btn-primary ghost-btn' %>
   </div>
 <% end %>

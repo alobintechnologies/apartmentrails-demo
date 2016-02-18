@@ -6,10 +6,10 @@
       </div>
       <div class="col-sm-6">
         <div class="tool-bar">
-          <div class="btn-group pull-right tool-bar-item" role="group">
+          <div class="btn-group pull-right tool-bar-thumbnail" role="group">
             <a href="#" class="btn btn-success btn-sm">Add Task list</a>
           </div>
-          <div class="btn-group pull-right tool-bar-item" role="group">
+          <div class="btn-group pull-right tool-bar-thumbnail" role="group">
             <%= link_to '<i class="fa fa-star"></i>'.html_safe, 'projects', class: 'btn btn-default btn-sm ' + set_active('projects') %>
             <a href="projects/archived" class="btn btn-default btn-sm <%= set_active('projects/archived') %>"><i class="fa fa-archive"></i></a>
             <a href="projects/completed" class="btn btn-default btn-sm <%= set_active('projects/completed') %>"><i class="fa fa-folder"></i></a>
@@ -86,25 +86,25 @@
               <div class="clearfix"></div>
             </div>
             <div class="panel-body">
-              <!--(.todo-list-group>h4{Todo list title$:}+(ul.nav.nav-stacked.todo-list>(li.todo-item>input:checkbox+span{todo list item$})*4)+a[href=#]{Add new todo})*4 -->
+              <!--(.todo-list-group>h4{Todo list title$:}+(ul.nav.nav-stacked.todo-list>(li.todo-thumbnail>input:checkbox+span{todo list thumbnail$})*4)+a[href=#]{Add new todo})*4 -->
               <div class="todo-list-group">
                 <h4>Todo list title1:</h4>
                 <ul class="todo-list nav nav-stacked">
-                  <li class="todo-item"><input type="checkbox"><span>todo list item1</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item2</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item3</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item4</span></li>
-                  <li class="todo-item"><input type="checkbox"><input type="text" class="form-control input-sm" placeholder="Add new todo"></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail1</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail2</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail3</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail4</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><input type="text" class="form-control input-sm" placeholder="Add new todo"></li>
                 </ul>
               </div>
               <div class="todo-list-group">
                 <h4>Todo list title2:</h4>
                 <ul class="todo-list nav nav-stacked">
-                  <li class="todo-item"><input type="checkbox"><span>todo list item1</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item2</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item3</span></li>
-                  <li class="todo-item"><input type="checkbox"><span>todo list item4</span></li>
-                  <li class="todo-item"><input type="checkbox"><input type="text" class="form-control input-sm" placeholder="Add new todo"></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail1</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail2</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail3</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><span>todo list thumbnail4</span></li>
+                  <li class="todo-thumbnail"><input type="checkbox"><input type="text" class="form-control input-sm" placeholder="Add new todo"></li>
                 </ul>
               </div>
             </div>
@@ -187,7 +187,7 @@
               </table>
             </div>
           </div>
-          <div class="panel attachments-panel">
+          <div class="panel attachments-panel" id="attachmentsPanel">
             <div class="panel-heading">
               <h3 class="panel-title pull-left"><i class="fa fa-files-o"></i> Attachments</h3>
               <a href="#" class="pull-right">See all files</a>
@@ -197,28 +197,28 @@
               <div class="attachments">
                 <div class="row">
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="17 MB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="13 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="23 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                   <div class="col-sm-3 col-xs-6">
-                    <div class="attachment thumbnail"><a href="#"><%= image_tag('no-avatar', width: '100%') %></a></div>
+                    <div class="attachment thumbnail"><a href="#attachmentsPanel" class="lightbox" data-show-modal="true" data-file-size="423 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '100%') %></a></div>
                   </div>
                 </div>
               </div>
@@ -228,16 +228,58 @@
       </div>
     </section>
   </article>
+  <div class="modal fade" id="attachmentLightBoxModal" tabindex="-1" role="dialog" aria-labelledby="attachmentLightBoxModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title lightbox-file-title" id="attachmentLightBoxModalTitle">Attachment Modal</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="lightbox-img"></div>
+            </div>
+            <div class="col-sm-8">
+              <div class="lightbox-content">
+                <h3 class="lightbox-file-title"></h3>
+                <p>
+                  <label>Size: </label><small class="lightbox-file-size"></small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lightbox-thumbnails">
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="12 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="523 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="23 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="13 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+            <div class="thumbnail attachment"><a href="#attachmentsPanel" class="lightbox" data-file-size="123 KB" data-file-name="no-avatar.png"><%= image_tag('no-avatar', width: '32') %></a></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"><i class="fa fa-download"></i> Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal fade" id="inviteUserModal" tabindex="-1" role="dialog" aria-labelledby="inviteUserModalTitle" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="inviteUserModalTitle"></h4>
+          <h4 class="modal-title" id="inviteUserModalTitle">Invite User</h4>
         </div>
         <div class="modal-body">
-          <%= form_tag do |f| %>
-            <%= text_field_tag :email %>
+          <%= form_tag(class: 'form form-horizontal') do |f| %>
+            <div class="form-group">
+              <label for="">Email address:</label>
+              <%= text_field_tag :email, nil, class: 'form-control' %>
+            </div>
           <% end %>
         </div>
         <div class="modal-footer">
