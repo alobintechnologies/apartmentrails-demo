@@ -201,16 +201,27 @@ $project-show-logo: false;
   }
 } // project
 .project-form-panel {
-  .icon {
-    font-size: $padding-base-vertical * 5;
-    .fa {
-      color: $gray;
-    }
-  }
+
   .panel-title {
     font-size: $padding-base-vertical * 3;
     border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     margin-bottom: 30px;
+    margin-top: 30px;
+    small {
+      line-height: 62px;
+      float: right;
+      display: inline-block;
+      a {
+        color: $brand-primary;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+
+    .panel-body {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
   }
 }
