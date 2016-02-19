@@ -9,9 +9,13 @@ body.skin-green {
   }
 }
 
-body.skin-default {
-  background-color: #fff;
-
+body.skin-orange {
+  background-color: #DAA190;
+  #mainHeader {
+    nav {
+      background-color: #fff;
+    }
+  }
   // main-menu styles
   .alomain-menus {
     display: block;
@@ -44,4 +48,15 @@ body.skin-default {
       }
     }
   }
+
+  .main-content {
+    background-color: #fff;
+    @include box-shadow($base-box-shadow);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+body.skin-default {
+  background-color: #fff;
 }
