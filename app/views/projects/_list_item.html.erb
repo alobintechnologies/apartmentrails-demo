@@ -2,7 +2,7 @@
   <td>
     <%= link_to project_icon(project), project, style: 'background-color: #e3e34d', class: 'img-circle project-icon' %>
   </td>
-  <td><h4><%= link_to project.name, project %><br/><small><%= truncate(project.desc, :length => 80) %></small></h4></td>
+  <td><h4><%= link_to project.name, project %></h4></td>
   <td><small><%= time_ago_in_words(project.created_at) %> ago</small></td>
   <td>
     <!-- TODO: implement teams for users with project -->
