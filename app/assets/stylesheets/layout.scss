@@ -17,7 +17,6 @@ body {
   margin-bottom: 0px;
   @include box-shadow(0 2px 0 0 rgba(0, 0, 0, 0.035));
   border-bottom: 1px solid #e9e7e7;
-  background-color: #fdfcf9;
   @media(min-width: 768px) {
     /*.container {
       padding-left: 0;

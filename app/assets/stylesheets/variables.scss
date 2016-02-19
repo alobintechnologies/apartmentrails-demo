@@ -1,18 +1,18 @@
-$base-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+$base-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
 /* Bootstrap variable customized */
 
 // Typography
 $font-family-sans-serif:  "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 // Colors
-$gray-base:              #222 !default;
+$gray-base:              #333 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 85.5%) !default; // #eee
 
-$brand-primary:         #8dc63f !default;//#A26CFA !default; //#49A8DB; // #337ab7
+$brand-primary:         #FE825A !default; //#8dc63f !default;//#A26CFA !default; //#49A8DB; // #337ab7
 $brand-success:         #38B44A !default;
 $brand-info:            #A7748F !default;
 $brand-warning:         #EFB73E !default;
@@ -41,7 +41,7 @@ $navbar-default-link-hover-color:          darken($brand-primary, 4.5%); //#fff 
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         darken($brand-primary, 4.5%); //#fff !default;
 $navbar-default-link-active-bg:            transparent !default; //darken($navbar-default-bg, 4.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-color:       #e5e5e5 !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
@@ -53,3 +53,44 @@ $navbar-default-brand-hover-bg:            transparent !default;
 $navbar-default-toggle-hover-bg:           #fff !default;
 $navbar-default-toggle-icon-bar-bg:        #fff !default;
 $navbar-default-toggle-border-color:       #fff !default;
+
+// table
+$table-border-color: #efefef !default;
+
+//tabs
+$nav-tabs-border-color: #efefef !default;
+
+$nav-tabs-active-link-hover-border-color: #efefef !default;
+
+$nav-tabs-justified-link-border-color: #efefef !default;
+
+// pagination
+$pagination-border: #efefef !default;
+$pagination-disabled-border: #efefef !default;
+
+// list-group
+$list-group-border: #efefef !default;
+
+// panel
+$panel-inner-border:          #efefef !default;
+$panel-default-border:        #efefef !default;
+
+// thumbnail
+$thumbnail-border:            #efefef !default;
+
+// forms
+$input-border: #e5e5e5 !default;
+
+// dropdown
+$dropdown-fallback-border: #e5e5e5 !default;
+$dropdown-caret-color: #000 !default;
+
+// popover
+$popover-fallback-border-color: #e5e5e5 !default;
+
+// breadcrumb
+$breadcrumb-color: #e5e5e5 !default;
+
+// btn
+$btn-default-border: #e5e5e5 !default;
+$btn-default-color: #7B6975 !default;

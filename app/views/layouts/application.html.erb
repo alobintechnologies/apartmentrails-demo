@@ -51,7 +51,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
                   <%= link_to '<i class="fa fa-power-off"></i>'.html_safe, destroy_user_session_path, method: 'delete', class: 'btn btn-default outline navbar-btn' %>
-                  <%= link_to 'New Project', new_project_path, class: 'btn btn-primary navbar-btn' %>
+                  <%= link_to '<i class="fa fa-plus"></i> New'.html_safe, new_project_path, class: 'btn btn-primary navbar-btn' %>
                 <% end %>
               </ul>
               <% if user_signed_in? %>
@@ -63,7 +63,17 @@
           </div><!-- /.container-fluid -->
         </nav>
       </header>
-
+      <div class="alomain-menus">
+        <div class="container">
+          <ul class="nav nav-justified">
+            <li class="active"><a href="#"><i class="fa fa-folder-o"></i> My Space</a></li>
+            <li><a href="#"><i class="fa fa-share-square-o"></i> My Shares</a></li>
+            <li><a href="#"><i class="fa fa-times-circle"></i> Recent</a></li>
+            <li><a href="#"><i class="fa fa-star-o"></i> Starred</a></li>
+            <li><a href="#"><i class="fa fa-times-circle-o"></i> Trash</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="container">
         <section class="main-content">
             <%= flash_messages %>
