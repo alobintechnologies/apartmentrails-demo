@@ -16,38 +16,6 @@ body.skin-orange {
       background-color: #fff;
     }
   }
-  // main-menu styles
-  .alomain-menus {
-    display: block;
-    border-bottom: 1px inset #f5f5f5;
-    background-color: lighten($brand-primary, 32%);
-    .nav {
-      li {
-        border-left: 1px solid #f5f5f5;
-        a {
-          font-size: 12px;
-          .fa {
-            display: block;
-            font-size: 20px;
-          }
-          &:hover {
-            background-color: transparent;
-          }
-        }
-        &.active {
-          a {
-            font-weight: bold;
-            border-bottom: 2px solid #FC964E;
-            background-color: lighten($brand-primary, 30%);
-            margin-bottom: -1px;
-          }
-        }
-        &:last-child {
-          border-right: 1px solid #f5f5f5;
-        }
-      }
-    }
-  }
 
   .main-content {
     background-color: #fff;

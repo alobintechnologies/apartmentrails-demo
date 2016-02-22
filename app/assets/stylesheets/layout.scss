@@ -28,6 +28,44 @@ body {
   }
 }
 
+// main-menu styles
+.alomain-menus {
+  display: block;
+  border-bottom: 1px inset #f5f5f5;
+  background-color: lighten($brand-primary, 32%);
+  .nav {
+    li {
+      border-left: 1px solid #f5f5f5;
+      a {
+        .fa {
+          display: block;
+          font-size: 20px;
+        }
+        @media (min-width: 768px) {
+          .fa {
+            display: inline;
+            font-size: initial;
+          }
+        }
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      &.active {
+        a {
+          font-weight: bold;
+          border-bottom: 2px solid $brand-primary;
+          background-color: lighten($brand-primary, 30%);
+          margin-bottom: -1px;
+        }
+      }
+      &:last-child {
+        border-right: 1px solid #f5f5f5;
+      }
+    }
+  }
+}
+
 /* 3. Main Content Styles */
 .main-content {
   min-height: 500px;

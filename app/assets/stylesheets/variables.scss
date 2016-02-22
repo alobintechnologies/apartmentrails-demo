@@ -5,7 +5,7 @@ $base-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 // Typography
 $font-family-sans-serif:  "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 // Colors
-$gray-base:              #222 !default;
+$gray-base:              #111 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
