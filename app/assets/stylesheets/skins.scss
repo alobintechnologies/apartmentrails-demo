@@ -26,5 +26,26 @@ body.skin-orange {
 }
 
 body.skin-default {
-  background-color: #fff;
+  //background-color: #F7FAFC;
+
+  #mainHeader {
+    nav {
+      background-color: #fff;
+    }
+  }
+
+  .alomain-menus {
+    background-color: #FAFCFD;
+    border-bottom: 1px solid #f0f0f0;
+    .nav {
+      li.active {
+        background-color: #FDF7F1;
+      }
+    }
+  }
+
+  .main-content {
+    background-color: #fff;
+  }
+
 }
