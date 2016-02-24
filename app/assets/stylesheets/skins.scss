@@ -3,12 +3,49 @@ body.skin-green {
 
   .main-content {
       background-color: #fff;
-      box-shadow: $base-box-shadow;
+      @include box-shadow($base-box-shadow);
       padding-left: 30px;
       padding-right: 30px;
   }
 }
 
+body.skin-orange {
+  background-color: #DAA190;
+  #mainHeader {
+    nav {
+      background-color: #fff;
+    }
+  }
+
+  .main-content {
+    background-color: #fff;
+    @include box-shadow($base-box-shadow);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 body.skin-default {
-  background-color: #fff;
+  //background-color: #F7FAFC;
+
+  #mainHeader {
+    nav {
+      background-color: #fff;
+    }
+  }
+
+  .alomain-menus {
+    background-color: #FAFCFD;
+    border-bottom: 1px solid #f0f0f0;
+    .nav {
+      li.active {
+        background-color: #FDF7F1;
+      }
+    }
+  }
+
+  .main-content {
+    background-color: #fff;
+  }
+
 }

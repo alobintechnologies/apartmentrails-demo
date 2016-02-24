@@ -22,8 +22,8 @@
     line-height: 1.25;
     background-color: rgba(255,255,255,1);
     border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    @include border-radius(4px);
+    @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
   }
   .dropdown-menu>li>a {
     line-height: 2;
@@ -34,7 +34,7 @@
   @include make-it-uppercase;
 }
 .btn-lg.round {
-  border-radius: 24px;
+  @include border-radius(24px);
 }
 .btn.outline {
   background: none;
@@ -50,7 +50,7 @@
 .btn-default.outline:active, .btn-default.outline.active {
   border-color: $btn-default-border;
   color: $btn-default-border;
-  box-shadow: none;
+  @include box-shadow(none);
 }
 
 .btn-primary.outline {
@@ -64,5 +64,30 @@
 .btn-primary.outline:active, .btn-primary.outline.active {
   border-color: $btn-primary-border;
   color: $btn-primary-border;
-  box-shadow: none;
+  @include box-shadow(none);
+}
+
+/* Modal styles */
+.modal-backdrop.in {
+  opacity: .9;
+  filter: alpha(opacity=90);
+}
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-header .close {
+  margin-top: -50px;
+  margin-right: -50px;
+  width: 30px;
+  height: 30px;
+  @include border-radius(50%);
+}
+.modal-content {
+  @include box-shadow(0 2px 8px rgba(33,33,33,0.1));
+  border: 1px solid #e5e5e5;
+}
+
+/* form control */
+.form-control:focus {
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(102, 175, 233, 0.6));
 }
